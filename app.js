@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'angularapp')));
 
 // load index from angular app
 app.get('/', function(req, res) {
-  res.sendFile('./angularapp/app/index.html');
+  res.sendFile(path.join(__dirname, 'angularapp/app/index.html'));
 });
 
 // catch 404 and forward to error handler
