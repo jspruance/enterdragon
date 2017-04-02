@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/styles/main.css">
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+  </head>
+  <body ng-app="app">
+
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+
+            <img src="app/images/enter-the-dragon.png" alt="Enter the Dragon" />
+          </div>
+
+            <ul class="nav navbar-nav">
+              <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+              <li><a ui-sref="login" ui-sref-active="active">Login</a></li>
+              <li><a ui-sref="about" ui-sref-active="active">About</a></li>
+              <li><a ui-sref="contact" ui-sref-active="active">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <ui-view></ui-view>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+      </div>
+    </div>
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="app/scripts/app.js"></script>
+        <!-- component includes -->
+        <script src="app/scripts/controllers/home.js"></script>
+        <script src="app/scripts/controllers/login.js"></script>
+        <script src="app/scripts/controllers/authsuccess.js"></script>
+        <script src="app/scripts/controllers/about.js"></script>
+        <script src="app/scripts/controllers/contact.js"></script>
+        <script src="app/scripts/services/authenticationservice.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
